@@ -1,0 +1,345 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url('/AlumniSystem/Users/CITCS/DEAN/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: opacity 1s ease-in-out;
+        }
+
+    body.loaded .dashboard-container {
+    opacity: 1;
+    transform: scale(1);
+}
+        .dashboard-container {
+            background: rgba(17, 17, 17, 0.5);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            width: 1300px;
+            text-align: center;
+            backdrop-filter: blur(5px); 
+              opacity: 0;
+    transform: scale(0.8);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+       
+        h1 {
+         font-size: 25px;
+    text-align: left;
+    margin-left: 20px; /* Adjust the margin if needed */
+    margin: 30px;
+}
+        
+
+      
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+.logout-button {
+    display: inline-block;
+    padding: 10px 15px;
+     background: #dc3545;
+    color: white;
+    border: 1px solid black; /* Add a border for a more standard look */
+    font-size: 16px;
+    font-weight: bold; /* Remove bold effect */
+    cursor: pointer;
+    border-radius: 3px; /* Slightly rounded corners */
+    text-decoration: none;
+    margin-top: 10px; /* Reduce margin */
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    
+   
+}
+
+
+        .logout-button:hover {
+            transform: scale(1.05);
+            background: rgb(0, 128, 0);
+             transform: translateY(-2px)
+        }
+        .logout-button i {
+    margin-right: 5px;
+}
+/* Dropdown styling */
+.dropdown {
+    margin-right: 20px; /* Adjust spacing between dropdowns */
+    margin-bottom: 15px;
+    padding: 5px; /* Optional: Add padding for better appearance */
+    padding: 8px;
+    font-size: 16px;
+    width: 200px; /* Adjust width as needed */
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    color: white; /* Text color */
+    backdrop-filter: blur(5px); /* Glass effect */
+    cursor: pointer;
+}
+
+/* Change arrow color */
+.dropdown option {
+    background-color: black; /* Dropdown options background */
+    color: white; /* Dropdown options text */
+}
+
+/* Hover effect */
+.dropdown:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Focus (when clicked) */
+.dropdown:focus {
+    outline: none;
+    border-color: white;
+}
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.page-link {
+    display: inline-block;
+       padding: 5px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    transition: 0.3s;
+     border: 1px solid #ccc;
+}
+
+.page-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+.page-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.page-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+    background: #7d7d7d;
+}
+.edit-button, .delete-button {
+    padding: 6px 12px;
+    margin: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.edit-button {
+    background: #28a745;
+    color: white;
+     transform: translateY(-2px);
+}
+
+.delete-button {
+    background: #dc3545;
+    color: white;
+     transform: translateY(-2px);
+}
+
+.edit-button:hover {
+    background: red;
+     transform: translateY(-2px);
+}
+
+.delete-button:hover {
+    background: green;
+}
+  .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+              margin-bottom: 10px; /* Space below button */
+        }
+
+        /* Hover Effect */
+        .download-btn:hover {
+            background-color: red; /* Darker green */
+            transform: translateY(-2px);
+        }
+
+        /* Active (clicked) Effect */
+        .download-btn:active {
+            background-color: #388e3c; /* Even darker green */
+            transform: translateY(0);
+        }
+
+        /* Optional: Add some margin to space out from other elements */
+        .download-btn-container {
+              display: flex;
+    align-items: center;
+    gap: 10px;
+            
+        }
+ .download-btn-container a {
+            margin-right: 50px; /* Adds space between the buttons */
+        }
+        .download-btn, .logout-button {
+    padding: 8px 12px;
+    text-decoration: none;
+ 
+    border-radius: 5px;
+}
+         /* Modal Overlay */
+#editModal {
+ display: none; /* Hide modal initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #444; /* Darker gray modal */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 500px;
+}
+
+    /* Dark background overlay */
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    display: none;
+    z-index: 999;
+}
+
+    /* Form Styling */
+    #editForm label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    #editForm input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    /* Button Styling */
+    .modal-buttons {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .modal-buttons button {
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+ .modal-buttons button[type="submit"] {
+    background: #777; /* Gray color */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-buttons button[type="submit"]:hover {
+    background: #999; /* Lighter gray on hover */
+}
+
+    .modal-buttons button[type="button"] {
+        background: #dc3545;
+        color: white;
+    }
+
+    .modal-buttons button[type="button"]:hover {
+        background: #c82333;
+    }
+    #editForm {
+      background-color: #333; /* Dark gray */
+      color: white; /* White text for contrast */
+      padding: 20px;
+      border-radius: 5px;
+  }
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #666;
+    background-color: #555; /* Input fields darker */
+    color: white;
+}
+.modal-buttons button {
+    background-color: #777;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.modal-buttons button:hover {
+    background-color: #999;
+}
+#editModal h1 {
+  
+    font-weight: bold;
+    font-size: 50px; /* Adjust size if needed */
+    margin-bottom: 10px; /* Add some spacing */
+}
