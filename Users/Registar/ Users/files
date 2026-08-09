@@ -1,1 +1,0 @@
-New-Item -ItemType Directory -Path Users\Registar\new-empty-folder New-Item -ItemType File -Path Users\new-empty-folder.gitkeep
