@@ -1,0 +1,243 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto; /* allow vertical scroll */
+}
+main {
+  flex: 1; /* grows to take available space */
+  overflow-y: auto;
+}
+        body {
+            background: url('/AlumniSystem/Users/CITCS/DEAN/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: opacity 1s ease-in-out;
+             flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+        }
+
+     body.loaded .dashboard-container {
+    opacity: 1;
+    transform: scale(1);
+}
+        .dashboard-container {
+            background: rgba(17, 17, 17, 0.5);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+           
+            width: 1200px;
+            text-align: center;
+            backdrop-filter: blur(5px); 
+               margin-bottom: 20px; /* Extra space at the bottom */
+              opacity: 0;
+    transform: scale(0.8);
+    
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        h1 {
+            font-size: 25px;
+            text-align: left;
+            margin-left: 20px;
+            margin: 30px;
+        }
+
+        table {
+           
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+      .logout-button {
+    display: inline-block;
+    padding: 8px 16px; /* Reduce padding for a smaller button */
+     background: #dc3545;
+    color: white;
+    border: 1px solid black; /* Add a border for a more standard look */
+    font-size: 14px; /* Reduce font size */
+    font-weight: bold; /* Remove bold effect */
+    cursor: pointer;
+    border-radius: 3px; /* Slightly rounded corners */
+    text-decoration: none;
+    margin-top: 10px; /* Reduce margin */
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+
+        .logout-button:hover {
+            transform: scale(1.05);
+             background: rgb(0, 128, 0); /* Darker red */
+        }
+        .logout-button i {
+    margin-right: 5px;
+}
+/* Dropdown styling */
+.dropdown {
+    margin-right: 20px; /* Adjust spacing between dropdowns */
+    margin-bottom: 15px;
+    padding: 5px; /* Optional: Add padding for better appearance */
+    padding: 8px;
+    font-size: 16px;
+    width: 200px; /* Adjust width as needed */
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    color: white; /* Text color */
+    backdrop-filter: blur(5px); /* Glass effect */
+    cursor: pointer;
+}
+
+/* Change arrow color */
+.dropdown option {
+    background-color: black; /* Dropdown options background */
+    color: white; /* Dropdown options text */
+}
+
+/* Hover effect */
+.dropdown:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Focus (when clicked) */
+.dropdown:focus {
+    outline: none;
+    border-color: white;
+}
+  
+ .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.page-link:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.page-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+    background: #7d7d7d;
+}
+ .tabs { display: flex; 
+ justify-content: space-around;
+  cursor: pointer;
+   margin-bottom: 20px;
+    }
+    
+        .tab { padding: 10px 20px;
+         border-bottom: 2px solid transparent; 
+         transition: 0.3s;
+          }
+         
+        .tab.active { border-bottom: 2px solid white; 
+        }
+        .tab-content {
+        display: none; 
+        }
+        .tab-content.active 
+        { display: block; 
+        }
+  
+
+.charts-container {
+    display: flex;
+    justify-content: space-between; /* Reduces excess space */
+    align-items: center;
+    gap: 10px; /* Keeps some spacing */
+    width: 100%; /* Ensures proper width allocation */
+}
+
+
+#studentBarChart {
+    flex: 2; /* Make the bar chart slightly smaller */
+    max-width: 60%;
+}
+#studentPieChart {
+    flex: 1; /* Adjust pie chart width */
+    max-width: 35%; /* Increase slightly */
+}
+
+
+.container {
+    padding-left: 5px;  /* Further reduce left padding */
+    padding-right: 5px; /* Further reduce right padding */
+    max-width: 100%; /* Use the full width of the screen */
+    margin: auto; /* Center everything */
+}
+canvas {
+    max-width: 100%; /* Ensures responsiveness */
+}
+
+       .legend-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; /* Center the legend */
+    text-align: center;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 77, 0, 0.6); /* Dark green with 60% transparency */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    backdrop-filter: blur(5px); /* Blurred background effect */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Soft border to improve readability */
+}
+
+/* Styling links in the footer */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+       
